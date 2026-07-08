@@ -1,0 +1,45 @@
+ [
+    {
+        "type": "html",
+        "Content": "<!DOCTYPE html>\n<html lang='en'>\n<head>\n    <meta charset='UTF-8'>\n    <title>Home</title>\n\n    <link rel='stylesheet' href='./.a/skdfj/style.css'>\n</head>\n\n<body>\n\n<header>\n    <h1>Code Editor Demo</h1>\n\n    <nav>\n        <a href='Index.html'>Home</a>\n        <a href='about.html'>About</a>\n        <a href='blogPage.html'>Blog</a>\n    </nav>\n</header>\n\n<main>\n\n    <section class='hero'>\n        <h2>Build websites directly in your browser</h2>\n\n        <p>\n            This demo shows navigation between multiple HTML pages,\n            multiple CSS files and JavaScript support.\n        </p>\n\n        <button id='helloBtn'>\n            Click Me\n        </button>\n\n        <p id='message'></p>\n\n    </section>\n\n</main>\n     <script src='./app.js'> </script>\n</body>\n</html>",
+        "name":"Index.html",
+        "left":"1px",
+        "bottom":"1px"
+    },
+    {
+        "type": "html",
+        "Content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n\n    <title>About</title>\n\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <link rel=\"stylesheet\" href=\"style2.css\">\n</head>\n\n<body>\n\n<header>\n\n    <h1>About Us</h1>\n\n    <nav>\n        <a href=\"Index.html\">Home</a>\n        <a href=\"about.html\">About</a>\n        <a href=\"blogPage.html\">Blog</a>\n    </nav>\n\n</header>\n\n<main>\n\n    <div class=\"card\">\n\n        <h2>Who are we?</h2>\n\n        <p>\n            We build modern web applications using HTML, CSS and JavaScript.\n        </p>\n\n    </div>\n\n</main>\n\n<script src=\"app.js\"></script>\n\n</body>\n</html>",
+        "name":"about.html",
+        "left":"2px",
+        "bottom":"2px"
+    },
+    {
+        "type": "html",
+        "Content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\n    <meta charset=\"UTF-8\">\n\n    <title>Blog</title>\n\n    <link rel=\"stylesheet\" href=\"style2.css\">\n\n</head>\n\n<body>\n\n<header>\n\n    <h1>Latest Articles</h1>\n\n    <nav>\n        <a href=\"Index.html\">Home</a>\n        <a href=\"about.html\">About</a>\n        <a href=\"blogPage.html\">Blog</a>\n    </nav>\n\n</header>\n\n<main>\n\n    <article class=\"post\">\n\n        <h2>Learning HTML</h2>\n\n        <p>\n            HTML is the structure of every website.\n        </p>\n\n    </article>\n\n    <article class=\"post\">\n\n        <h2>Learning CSS</h2>\n\n        <p>\n            CSS controls the appearance of your website.\n        </p>\n\n    </article>\n\n</main>\n\n<script src=\"app.js\"></script>\n\n</body>\n</html>",
+        "name":"blogPage.html",
+        "left":"3px",
+        "bottom":"3px"
+    },
+    {
+        "type": "css",
+        "Content": "body{ \n    margin:0; \n    font-family:Arial,Helvetica,sans-serif; \n    background:#101322; \n    color:white; \n} \n \nheader{ \n    background:#1b2140; \n    padding:20px; \n} \n \nnav{ \n    display:flex; \n    gap:20px; \n    margin-top:10px; \n} \n \nnav a{ \n    color:white; \n    text-decoration:none; \n} \n \nnav a:hover{ \n    color:#6c8cff; \n} \n \n.hero{ \npadding:40px; \n} \n \nbutton{ \n    margin-top:20px; \n    padding:12px 28px; \n    border:none; \n    border-radius:10px; \n    background:#4f46e5; \n    color:white; \n    cursor:pointer; \n}",
+        "name":"style.css",
+        "left":"4px",
+        "bottom":"4px"
+    },
+    {
+        "type": "css",
+        "Content": "body{ \n     margin:0; \n    font-family:Arial,Helvetica,sans-serif; \n    background:#101322; \n    color:white; \n} \n.card{ \n \n    margin:40px; \n    padding:30px; \n \n    background:#202846; \n \n    border-radius:12px; \n} \n \nheader{ \n    background:#1b2140; \n    padding:20px; \n} \n \n.post{ \n \n    margin:30px; \n \n    padding:25px; \n \n    background:#29355d; \n \n    border-left:6px solid #4f46e5; \n \n    border-radius:8px; \n} \n \n.post h2{ \n    margin-top:0; \n} \n \nnav{ \n    display:flex; \n    gap:20px; \n    margin-top:10px; \n} \n \nnav a{ \n    color:white; \n    text-decoration:none; \n} \n \nnav a:hover{ \n    color:#6c8cff; \n} \n",
+        "name":"style2.css",
+        "left":"5px",
+        "bottom":"5px"
+    },
+    {
+        "type": "js",
+        "Content": "const button = document.getElementById('helloBtn');\nsetTimeout(() => {\n    throw new Error('Runtime Error');\n}, 1000);\nsetTimeout(() => {\n    console.log('lkffkdfjlkjsdlkf')\n}, 1000);\nif (button) {\n\n    button.onclick =() => {\n\n        const message = document.getElementById('message');\n\n        if (message) {\n\n            message.textContent = 'JavaScript is working!';\n        }\n\n        console.log('Button clicked');\n    };\n\n}\n\nconsole.log('App loaded');\nconsole.log('how are you');\nconsole.log('go back boy');\n\n",
+        "name":"app.js",
+        "left":"6px",
+        "bottom":"6px"
+    }
+]
+

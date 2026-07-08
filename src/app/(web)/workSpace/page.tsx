@@ -59,14 +59,14 @@ export default function WorkSpaces(){
    }
   {/*==Deleting workspace==*/}
 
-  // {/*verify user*/}
-  //  const {data,isPending} = authClient.useSession()
-  //  const router=useRouter()
-  //  if(isPending) return;
-  //      if(!data){
-  //        router.push('/auth')
-  //      }
-  // {/*==verify user==*/}
+  {/*verify user*/}
+   const {data,isPending} = authClient.useSession()
+   const router=useRouter()
+   if(isPending) return;
+       if(!data){
+         router.push('/auth')
+       }
+  {/*==verify user==*/}
 
 
 

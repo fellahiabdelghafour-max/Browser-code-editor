@@ -7,10 +7,10 @@ import NavBar from "../../../../components/NavBar/navBar";
 
 export default async function EditorPage({params}:{params: Promise<{workSpaceId: Id<'WorkSpace'>}>}){
      const id=(await params).workSpaceId;
-    //  const token= await getToken();
-    //      if(!token){
-    //       redirect('/auth/sign_up')
-    //      }
+     const token= await getToken();
+         if(!token){
+          redirect('/auth/sign_up')
+         }
   return (
     <Box sx={{ 
         height: '100vh', 

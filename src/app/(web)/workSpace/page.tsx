@@ -83,7 +83,9 @@ return(<Box
         <Box sx={{position:'fixed',top:2,width:'100vw',height:'60px',bgcolor:'background.default'}}>
           <NavBar back={'/'}/>
         </Box>
-        
+        <Typography sx={{color:'#9b080894',mb:2}}>
+             Important note: The index file must be named Index.html.
+        </Typography>
       <Button
       sx={{
         mb:2

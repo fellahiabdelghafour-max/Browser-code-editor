@@ -29,43 +29,25 @@ export default function Home() {
         {
           DemoFiles.map((file,index)=>
             <Box key={index}
-            onClick={()=>setSelected(file.name)}
-          sx={{
-            position:'absolute',
-            transformStyle:"preserve-3d",
-            boxShadow:
-            file.name===selected
-            ?
-            `0 30px 70px ${mode==='light'?'rgba(0,0,0,.45)':'rgba(255, 255, 255, 0.45)'}`
-            :
-            `0 10px 25px ${mode==='light'?'rgba(0,0,0,.2)':'rgba(255, 255, 255, 0.2)'}`,          
-            transform:
-            file.name === selected
-            ?
-            `
-            translate(-20%,70%)
-            scale(1.05)
-            rotate(0deg)
-            `
-            :
-            `
-            translate(-80%, -70%)
-            translate(${index*45}px,${index*18}px)
-            rotate(${-(index-2)*4}deg)
-            `,
-            transition: "all .35s ease",
-            zIndex:file.name===selected?1:'',
-                  "&:hover":{
-                  cursor:"pointer",
-                  transform:file.name===selected
-                  ?undefined
-                  :`
-                  translate(-50%,-53%)
-                  translate(${index*35}px,${index*15}px)
-                  rotate(${-(index-2)*4}deg)
-                  `,
-                  },
-            }}>
+    onClick={() => setSelected(file.name)}
+    sx={{
+        position: 'absolute',
+        transformStyle: "preserve-3d",
+        boxShadow: file.name === selected
+            ? `0 30px 70px ${mode === 'light' ? 'rgba(0,0,0,.45)' : 'rgba(255,255,255,0.45)'}`
+            : `0 10px 25px ${mode === 'light' ? 'rgba(0,0,0,.2)' : 'rgba(255,255,255,0.2)'}`,
+        transform: file.name === selected
+            ? `translate(-20%, 70%) scale(1.05)`
+            : `translate(-80%, -70%) translate(${index * 45}px, ${index * 18}px) rotate(${-(index - 2) * 4}deg)`,
+        transition: "all .35s ease",
+        zIndex: file.name === selected ? 10 : 0,
+        // ← الحل: يمنع hover على الغير selected إلا عند الضغط مباشرة
+        '&:hover': file.name === selected ? {} : {
+            cursor: "pointer",
+            zIndex: 9, // ← يطلع فوق الكل عند hover
+            transform: `translate(-80%, -70%) translate(${index * 45}px, ${index * 18}px) rotate(0deg) scale(1.02)`,
+        },
+    }}>
             <Card 
                sx={{
                  width:'100%',
@@ -106,9 +88,9 @@ export default function Home() {
                               }
                               options={{
                                   fontSize: 14,
-                                  fontFamily: "'Fira Code', monospace", // ← font احترافي
+                                  fontFamily: "'Fira Code', monospace",
                                   fontLigatures: true,
-                                  minimap: { enabled: false },          // ← يوفر مساحة
+                                  minimap: { enabled: false },         
                                   scrollbar: { verticalScrollbarSize: 6 },
                                   lineNumbers: 'on',
                                   wordWrap: 'on',

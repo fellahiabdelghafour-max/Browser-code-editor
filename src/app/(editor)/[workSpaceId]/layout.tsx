@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 export default function LayoutEditor({children}:{children:ReactNode}){
 
      return(
+        <html>
      <body style={{margin:0}}>
         
         <ThemeModeProvider>
@@ -20,6 +21,8 @@ export default function LayoutEditor({children}:{children:ReactNode}){
 
          </AppThemeProvider>         
         </ThemeModeProvider>
-      </body> 
+      </body>             
+        </html>
+
      )
 }

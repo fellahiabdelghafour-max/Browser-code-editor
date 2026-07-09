@@ -15,7 +15,7 @@ export default function EditorLayout({id}:{id:Id<'WorkSpace'>}){
       
 <Grid container sx={{
     display: { xs: 'none', md: 'flex' },
-    height: '100%', // ← يملأ الـ parent فقط
+    height: '100%', 
     overflow: 'hidden',
 }}>
     <Grid size={{ lg: 2 }} sx={{ height: '100%',overflowY:'auto',overflowX:'hidden' }}>
@@ -28,7 +28,7 @@ export default function EditorLayout({id}:{id:Id<'WorkSpace'>}){
         <Preview id={id} />
     </Grid>
 </Grid>
-      <Box sx={{width:'100%',maxHeight:'100vh',minHeight:'90vh',display:{xs:'flex',sm:'flex',md:'none',lg:'none'}}}>
+      <Box sx={{width:'100%',height:'85vh',display:{xs:'flex',sm:'flex',md:'none',lg:'none'}}}>
           <Box sx={{display:open==='Files'?'':'none'}}>
             <Files id={id}/>
           </Box>

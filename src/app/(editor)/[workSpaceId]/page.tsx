@@ -13,9 +13,10 @@ export default async function EditorPage({params}:{params: Promise<{workSpaceId:
          }
   return (
     <Box sx={{ 
-        height: '100vh', 
+        minHeight: '100vh', 
         display: 'flex', 
         flexDirection: 'column', 
+        bgcolor:'background.default'
     }}>
         <NavBar back='/workSpace'/> 
         <Box sx={{ flex: 1, overflow: 'hidden' }}> 

@@ -13,7 +13,7 @@ export default async function EditorPage({params}:{params: Promise<{workSpaceId:
          }
   return (
     <Box sx={{ 
-        minHeight: '100vh', 
+        height: '100vh', 
         display: 'flex', 
         flexDirection: 'column', 
         bgcolor:'background.default'

@@ -12,11 +12,11 @@ export default function Home() {
       const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh" }}    >
-        <Typography variant="h3" component="h1" sx={{color:'text.primary'}}>
+    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}    >
+        <Typography  component="h1" sx={{color:'text.primary',fontSize:{sm:'15px',md:'30px'}}}>
           Welcome to Convex + Next.js!
         </Typography>
-        <Typography variant="h5" component="h1" sx={{color:'text.primary'}}>
+        <Typography  component="h1" sx={{color:'text.primary',fontSize:{sm:'10px',md:'25px'}}}>
           Browser Code Editor
         </Typography>
         <Link href={'/workSpace'}>
@@ -25,7 +25,7 @@ export default function Home() {
         </Button>   
 
         </Link>
-        <Box sx={{width:'100vw',height:'90vh',display:'flex',justifyContent:"center",alignItems:'center',position:'relative',perspective:1500,}}>
+        <Box sx={{width:'100vw',minHeight:'900px',display:'flex',justifyContent:"center",alignItems:'center',position:'relative',perspective:1500,ml:{sm:'',md:70}}}>
         {
           DemoFiles.map((file,index)=>
             <Box key={index}
@@ -49,7 +49,7 @@ export default function Home() {
             `
             :
             `
-            translate(-50%, -70%)
+            translate(-80%, -70%)
             translate(${index*45}px,${index*18}px)
             rotate(${-(index-2)*4}deg)
             `,
@@ -62,7 +62,7 @@ export default function Home() {
                   :`
                   translate(-50%,-53%)
                   translate(${index*35}px,${index*15}px)
-                  rotate(${(index-2)*2}deg)
+                  rotate(${-(index-2)*4}deg)
                   `,
                   },
             }}>
@@ -98,7 +98,7 @@ export default function Home() {
             </Card>
          <Editor
                              
-                              height="300px"
+                              height={file.name===selected?(isMobile?200:400):(isMobile?150:300)}
                               width={file.name===selected?(isMobile?200:600):(isMobile?150:500)}
                               theme={mode === 'dark' ? "vs-dark" : 'light'}
                               value={file.Content}

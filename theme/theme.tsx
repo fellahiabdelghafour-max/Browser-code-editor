@@ -84,10 +84,10 @@ export default function AppThemeProvider({ children }: { children: ReactNode }) 
            MuiTypography:{
             styleOverrides:{
                 root:{
-                    color:mode==='dark'?'#f7f7f7':'#000000'
+                    color:mode==='dark'?'#f7f7f7':'#000000',
                 }
             }
-           }
+           },
           
         }
     })
